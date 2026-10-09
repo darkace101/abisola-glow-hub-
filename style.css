@@ -1,0 +1,317 @@
+
+
+html {
+    scroll-behavior: smooth;
+    }
+
+/* =========================================
+1. GLOBAL STYLES & VARIABLES
+========================================= /
+:root {
+--primary-color: #d81b60; / Deep Rose Gold / Pink /
+--primary-hover: #b0124a;
+--accent-gold: #d4af37; / Gold Accent /
+--bg-light: #fff0f5; / Lavender Blush background /
+--card-bg: #ffffff; / Pure white card container */
+--text-dark: #222222;
+--text-muted: #666666;
+--shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+--shadow-hover: 0 8px 25px rgba(216, 27, 96, 0.2);
+--border-radius: 12px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: var(--bg-light);
+color: var(--text-dark);
+line-height: 1.6;
+}
+
+/* =========================================
+2. NAVBAR
+========================================= */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 5%;
+background-color: #ffffff;
+box-shadow: var(--shadow-light);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.logo h2 {
+color: var(--primary-color);
+font-size: 1.4rem;
+letter-spacing: 0.5px;
+}
+
+.nav-whatsapp-btn {
+background-color: #25d366; /* Official WhatsApp Green */
+color: white;
+padding: 0.6rem 1.2rem;
+text-decoration: none;
+font-weight: 600;
+border-radius: 25px;
+font-size: 0.9rem;
+transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-whatsapp-btn:hover {
+background-color: #1eb857;
+transform: translateY(-2px);
+}
+
+/* =========================================
+3. HERO BANNER
+========================================= */
+.hero {
+text-align: center;
+padding: 4rem 1rem;
+background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+border-bottom: 2px solid #f48fb1;
+}
+
+.hero-content {
+max-width: 700px;
+margin: 0 auto;
+}
+
+.hero h1 {
+font-size: 2.3rem;
+color: #880e4f;
+margin-bottom: 1rem;
+}
+
+.hero p {
+font-size: 1.1rem;
+color: #4a148c;
+margin-bottom: 1.8rem;
+}
+
+.hero-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 0.8rem 1.6rem;
+border-radius: 30px;
+text-decoration: none;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+.btn-primary {
+background-color: var(--primary-color);
+color: white;
+}
+
+.btn-primary:hover {
+background-color: var(--primary-hover);
+box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+background-color: white;
+color: var(--primary-color);
+border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+background-color: var(--primary-color);
+color: white;
+}
+
+/* =========================================
+4. CATALOG & CATEGORY FILTERS
+========================================= */
+.catalog-section {
+max-width: 1100px;
+margin: 3rem auto;
+padding: 0 1rem;
+text-align: center;
+}
+
+.catalog-section h2 {
+font-size: 2rem;
+color: var(--primary-color);
+margin-bottom: 1.5rem;
+}
+
+.category-buttons {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+border: none;
+padding: 0.6rem 1.2rem;
+background-color: #ffffff;
+color: var(--text-dark);
+font-weight: 600;
+border-radius: 20px;
+cursor: pointer;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+background-color: var(--primary-color);
+color: white;
+box-shadow: var(--shadow-hover);
+}
+
+/* =========================================
+5. PRODUCT GRID & CARDS
+========================================= */
+.product-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+}
+
+.product-card {
+background-color: var(--card-bg);
+border-radius: var(--border-radius);
+overflow: hidden;
+box-shadow: var(--shadow-light);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+display: flex;
+flex-direction: column;
+}
+
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow-hover);
+}
+
+.product-card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+}
+
+.product-info {
+padding: 1.2rem;
+text-align: left;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.category-tag {
+font-size: 0.8rem;
+text-transform: uppercase;
+color: var(--accent-gold);
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.product-info h3 {
+font-size: 1.1rem;
+margin: 0.4rem 0;
+color: var(--text-dark);
+}
+
+.price {
+font-size: 1.2rem;
+font-weight: bold;
+color: var(--primary-color);
+margin-bottom: 1rem;
+}
+
+.buy-btn {
+margin-top: auto;
+display: block;
+text-align: center;
+background-color: #25d366;
+color: white;
+text-decoration: none;
+padding: 0.7rem;
+border-radius: 8px;
+font-weight: bold;
+transition: background-color 0.2s;
+}
+
+.buy-btn:hover {
+background-color: #1eb857;
+}
+
+/* =========================================
+6. FOOTER
+========================================= */
+footer {
+text-align: center;
+padding: 2rem 1rem;
+background-color: #ffffff;
+margin-top: 4rem;
+border-top: 1px solid #eee;
+color: var(--text-muted);
+}
+
+footer a {
+color: var(--primary-color);
+text-decoration: none;
+font-weight: bold;
+}
+
+
+
+
+.description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    }
+
+
+
+    
+
+.trust-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    }
+    
+    .feature-item {
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    }
+    
+    .feature-item span {
+    font-size: 2rem;
+    }
+    
+    .feature-item h4 {
+    color: var(--primary-color);
+    margin: 0.3rem 0;
+    }
+    
+    .feature-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    }
